@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  background-image: url("./assets/bg-main-mobile.png");
+  background-position: 25px -244px;
+  background-repeat: no-repeat;
+  color: #191826;
+}
+
+.bg-pattern-1 {
+  display: none;
+}
+
+.logo{
+  margin: 40px 0 0 24px;
+}
+
+header{
+  margin-bottom: 68px;
+}
+
+header h1{
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  
+
+  margin: 64px 24px 0px 24px;
+}
+
+.body-1{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 20px 24px 0px 24px;
+}
+
+main{
+  position: relative;
+  height: 1024px;
+  width: 375px;
+  margin: auto;
+}
+
+.illustration{
+  position: absolute;
+  left: 80px;
+  z-index: 1;
+  width: 209px;
+  height: 430px;
+}
+
+.card-decoration{
+  top: 98px;
+  position: absolute;
+  z-index: 0;
+  height: 600px;
+  width: 375px;
+  background-color:#191826;
+  border-radius: 12px;
+  
+}
+
+.card-decoration img{
+  height: 420px;
+  width: 280px;
+  margin: 0 48px 180px 48px;
+}
+
+.card-data{
+  position: absolute;
+  z-index: 2;
+  top: 478px;
+  height: 546px;
+  width: 375px;
+  background-color: #FA7453;
+  border-radius: 12px;
+}
+
+.card-data h2{
+  color: white;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  
+  padding: 48px 37px 0 37px;
+}
+
+.body-2{
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 12px 37px 36px 37px;
+}
+
+.price{
+  color: white;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  margin: 0 16px 32px 42px;
+ 
+}
+
+.price-currency{
+  font-size: 65px;
+  line-height: 52px;
+  font-weight: 700;
+  margin-right: 16px;
+}
+
+.btn-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.btn{
+  height: 61px;
+  width: 281px;
+  border: none;
+  border-radius: 12px;
+  margin-left: 40px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-ios{
+  color: white;
+  background-color: #191826;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+
+}
+
+.btn-ios img{
+  margin-right: 8px;
+  margin-bottom: 5px;
+}
+
+.btn-ios:hover{
+  background-color: #66E2DC;
+}
+
+.btn-android{
+  color: #191826;
+  background-color: white;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.btn-android img{
+  margin-right: 8px;
+}
+
+.btn-android:hover{
+  background-color: #FFB964;
+}
+
+footer .logo{
+  margin-top: 64px;
+} 
+
+.social-network{
+  margin: 64px 0 80px 24px;
+}
+
+.social-network a {
+  margin-right: 20px;
+}
+
+.social-network a:hover .icon{
+  fill: #FFB964;
+}
