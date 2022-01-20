@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+
+$breakpoints: (
+    "phone": 375px,
+    "tablet": 768px,
+    "desktop": 1440px,
+);
+
+@mixin media-min($_key) {
+  @media screen and (min-width: map-get($breakpoints, $_key)) {
+      &{ @content; }
+  }
+}
+
+$base-color-1: #191826 ;
+$base-color-2: #FCFAF9 ;
+$primary-color-1: #FA7453 ;
+$primary-color-2: #FFB964 ;
+$primary-color-3: #66E2DC ;
+
+$font: "IBM Plex Sans", sans-serif;
+$font-bold: 700;
+$font-regular: 400;
+
+*, ::after, ::before {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+	list-style: none;
+}
+body {
+	font-family: $font;
+	background-image: url("./assets/bg-main-mobile.png");
+	background-position: 25px -244px;
+	background-repeat: no-repeat;
+	color: $base-color-1;
+
+  @include media-min("tablet") {
+    background-image: url("./assets/bg-main-tablet.png");
+    background-position: -366px -244px;
+  }
+  @include media-min("desktop") {
+    background-image: url("./assets/bg-main-desktop.png");
+  }
+}
+.bg-pattern-1 {
+	display: none;
+  @include media-min("tablet") {
+    display: block;
+    position: absolute;
+    height: 400px;
+    width: 267px;
+    top: -35px;
+    right: -35px;
+    
+  }
+  @include media-min("desktop") {
+    height: 468px;
+    width: 312px;
+    right: 0;
+  }
+}
+.logo {
+	margin: 40px 0 0 24px;
+  @include media-min("tablet") {
+    margin-top: 61px;
+    margin-left: 40px;
+  }
+  @include media-min("desktop") {
+    margin-left: 165px;
+  }
+}
+header {
+	margin-bottom: 68px;
+  
+	h1 {
+		font-size: 40px;
+		font-weight: $font-bold;
+		line-height: 48px;
+		margin: 64px 24px 0px 24px;
+	}
+  @include media-min("tablet") {
+    margin-bottom: 111px;
+    width: 570px;
+    h1{
+      font-size: 64px;
+      line-height: 64px;
+      margin-top: 95px;
+      margin-left: 39px;
+    }
+  }
+  @include media-min("desktop") {
+    
+    h1{
+      font-size: 88px;
+      line-height: 88px;
+      margin-top: 127px;
+      margin-left: 165px;
+      width: 900px;
+    }
+  }
+}
+.body-1 {
+	font-size: 16px;
+	font-weight: $font-regular;
+	line-height: 26px;
+	margin: 20px 24px 0px 24px;
+
+  @include media-min("tablet") {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 28px;
+    margin-left: 39px;
+  }
+  @include media-min("desktop") {
+    font-size: 20px;
+    line-height: 34px;
+    margin-top: 40px;
+    margin-left: 165px;
+    width: 825px;
+  }
+}
+
+main {
+	position: relative;
+	height: 1024px;
+	width: 375px;
+	margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @include media-min("tablet") {
+    height: 834px;
+    width: 696px;
+  }
+  @include media-min("desktop") {
+    height: 928px;
+    width: 1100px;
+  }
+}
+.illustration {
+	position: absolute;
+	left: 80px;
+	z-index: 1;
+	width: 209px;
+	height: 430px;
+  @include media-min("tablet") {
+    width: 270px;
+	  height: 556px;
+    left: 64px;
+  }
+  @include media-min("desktop") {
+    width: auto;
+	  height: 642px;
+    left: 95px;
+  }
+
+}
+.card-decoration {
+	top: 98px;
+	position: absolute;
+	z-index: 0;
+	height: 600px;
+	width: 375px;
+	background-color: $base-color-1;
+	border-radius: 12px;
+	img {
+		height: 420px;
+		width: 280px;
+		margin: 0 48px 180px 48px;
+	}
+  @include media-min("tablet") {
+    width: 696px;
+    top: 138px;
+    img{
+      margin: 0 187px 211px 229px;
+    }
+  }
+  @include media-min("desktop") {
+    width: 1100px;
+    top: 213px;
+    img{
+      margin: 0 462px 172px 336px;
+    }
+  }
+}
+.card-data {
+	position: absolute;
+	z-index: 2;
+	top: 478px;
+	height: 546px;
+	width: 375px;
+	background-color: $primary-color-1;
+	border-radius: 12px;
+	h2 {
+		color: $base-color-2;
+		font-weight: $font-bold;
+		font-size: 32px;
+		line-height: 40px;
+		padding: 48px 37px 0 37px;
+	}
+
+  @include media-min("tablet") {
+    left: 239px;
+    top: 288px;
+  }
+  @include media-min("desktop") {
+    left: 569px;
+    top: 303px;
+    height: 625px;
+	  width: 446px;
+    h2{
+      font-size: 40px;
+		  line-height: 52px;
+      padding: 58px 54px 0 54px;
+    }
+  }
+}
+.body-2 {
+	color: $base-color-2;
+	font-weight: $font-regular;
+	font-size: 18px;
+	line-height: 28px;
+	padding: 12px 37px 36px 37px;
+  
+  @include media-min("desktop") {
+    font-size: 20px;
+	  line-height: 34px;
+    padding: 22px 54px 39px 54px;
+  }
+}
+.price {
+	color: $base-color-2;
+	font-size: 20px;
+	line-height: 32px;
+	font-weight: $font-regular;
+	display: flex;
+	align-items: center;
+	margin: 0 16px 32px 42px;
+
+  @include media-min("desktop") {
+    margin-left: 54px;
+    margin-bottom: 46px;
+  }
+}
+.price-currency {
+	font-size: 65px;
+	line-height: 52px;
+	font-weight: $font-bold;
+	margin-right: 16px;
+}
+.btn-container {
+	display: flex;
+	flex-direction: column;
+}
+.btn {
+	height: 61px;
+	width: 281px;
+	border: none;
+	border-radius: 12px;
+	margin-left: 40px;
+	margin-bottom: 16px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  @include media-min("desktop") {
+    width: 333px;
+    margin-left: 54px;
+  }
+}
+
+.btn-ios {
+  color: $base-color-2;
+  background-color: $base-color-1;
+  font-weight: $font-bold;
+  font-size: 18px;
+  line-height: 32px;
+  img {
+    margin-right: 8px;
+    margin-bottom: 5px;
+  }
+  &:hover {
+    background-color: $primary-color-3;
+  }
+}
+
+.btn-android {
+  color: $base-color-1;
+  background-color: $base-color-2;
+  font-weight: $font-bold;
+  font-size: 18px;
+  line-height: 32px;
+  img {
+    margin-right: 8px;
+  }
+  &:hover {
+    background-color: $primary-color-2;
+  }
+}
+
+footer {
+	.logo {
+		margin-top: 64px;
+	}
+  .social-network {
+    margin: 64px 0 80px 24px;
+    a {
+      margin-right: 20px;
+      &:hover {
+        .icon {
+          fill: $primary-color-2;
+        }
+      }
+    }
+  }  
+
+  .body-3 {
+    font-size: 16px;
+    font-weight: $font-regular;
+    line-height: 26px;
+    margin: 20px 24px 0px 24px;
+  }
+
+  @include media-min("tablet") {
+    .logo{
+      margin-left: 33px;
+      margin-top: 87px;
+    }
+
+    .copyright{
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    .social-network{
+      margin-right: 39px;
+    }
+
+    .body-3{
+      margin: 32px 0 85px 33px ;
+      width: 366px;
+    }
+  }
+  @include media-min("desktop") {
+    display: flex;
+    justify-content: space-between;
+    margin: 87px 165px 91px 165px;
+
+    .copyright{
+      align-items: center;
+    }
+
+    .social-network{
+      margin: 0
+    }
+
+    .logo{
+      margin: 0;
+      height: 32px;
+      width: 146px;
+    }
+    .body-3{
+      margin: 0 330px 0 0;
+    }
+
+  }
+
+}
