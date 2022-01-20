@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Not available](###)
+- Solution URL: [Click here](https://elyasthr.github.io/equalizer-landing-page/)
 
 ## My process
 
